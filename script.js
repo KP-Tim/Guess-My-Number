@@ -5,6 +5,9 @@ const checkBtn = document.querySelector('.check');
 const secretNumber = Math.trunc(Math.random() * 10 + 1); //Need to change number to 20 at the end
 let score = 20;
 
+function on
+
+
 document.querySelector('.number').textContent = secretNumber;
 checkBtn.addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -20,5 +23,11 @@ checkBtn.addEventListener('click', function () {
     document.querySelector('.message').textContent = '📉Too low!';
     score--;
     document.querySelector('.score').textContent = score;
+  }
+});
+
+document.querySelector('.guess').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    console.log('hi');
   }
 });
